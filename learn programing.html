@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeToInnovate Africa</title>
+    <link rel="stylesheet" href="/css/bootsrap.min.css">
+    <link rel="stylesheet" href="/css/boxicons.min.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+.landing-page {
+            margin-top: 100 px;
+            position: relative;
+            height: 90vh; /* Reduced height from 100vh to 60vh */
+            overflow: hidden; /* Hide overflow */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .landing-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the entire section */
+            position: absolute; /* Position behind text */
+            top: 0;
+            left: 0;
+            z-index: 1; /* Image behind the text */
+        }
+
+        .overlay {
+            position: relative;
+            z-index: 2; /* Text on top of the image */
+            color: #fff;
+            padding: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .overlay h1 {
+    
+            
+            font-size: 3em; /* Responsive font size */
+            margin: 0;
+            
+        }
+
+        .overlay p {
+            font-size: 1.5em; /* Responsive font size */
+        }
+
+        @media (max-width: 768px) {
+            .overlay h1 {
+                font-size: 2.5em; /* Smaller font for mobile */
+            }
+
+            .overlay p {
+                font-size: 1.2em; /* Smaller font for mobile */
+            }
+        }
+           /*stye for about the program*/ 
+
+        .photo-text-section {
+            margin-top: 8px;
+            padding: 30px 0;
+        background-color: white;
+
+            background-attachment: fixed;
+        }
+        
+        .photo-text-section .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        
+        .photo-text-section .photo {
+            
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            margin-top: 20px;
+        }
+        
+        .photo-text-section .photo:hover {
+            transform: scale(1.05);
+        }
+        
+        .photo-text-section .text-content {
+            padding: 0 10px 10px 15px;
+        }
+        
+        .photo-text-section h2 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #333;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .photo-text-section p {
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        .photo-text-section button {
+            animation: fadeIn 2s ease-in-out;
+        }
+        
+        /* Responsive styles */
+        
+        @media (max-width: 768px) {
+            .photo-text-section .row {
+                flex-direction: column;
+            }
+            
+            .photo-text-section .photo {
+                height: 200px;
+                margin-bottom: 20px;
+                margin-top: 0;
+            }
+            
+            .photo-text-section .text-content {
+                padding: 20px;
+            }
+            
+            .photo-text-section h2 {
+                margin-top: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .photo-text-section .photo {
+                height: 150px;
+            }
+            
+            .photo-text-section h2 {
+                font-size: 24px;
+            }
+            
+            .photo-text-section p {
+                font-size: 18px;
+            }
+        }
+        
+        /* Animation styles */
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /*COURSE OUTLINE STYLES*/
+        .ercdv-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Course Outline Section */
+        #ercdv-course-outline-section {
+            padding: 5px 0;
+            background-color: #1e88e5;
+            margin-top: 10px;
+        }
+
+        .ercdv-section-title {
+            text-align: left;
+            font-size: 20px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .ercdv-course-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .ercdv-card {
+            flex: 1;
+            background-color: #ece7e7;
+            padding: 5px;
+            border-radius: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: ercdv-fadeInUp 0.8s forwards ease-in-out;
+        }
+
+        .ercdv-card-title {
+            font-size: 1.8em;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .ercdv-course-outline {
+            padding-left: 16px;
+            list-style: none;
+        }
+
+        .ercdv-course-outline li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #444;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .ercdv-course-outline li:before {
+            content: '✔';
+            color: #007bff;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 10px;
+        }
+
+        .ercdv-course-outline li:hover {
+            color: #007bff;
+            transform: translateX(10px);
+            cursor: pointer;
+            transition: color 0.3s ease-in-out;
+        }
+
+        /* Keyframes for Animation */
+        @keyframes ercdv-fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .ercdv-course-content {
+                flex-direction: column;
+            }
+
+            .ercdv-card-title {
+                font-size: 1.6em;
+            }
+
+            .ercdv-section-title {
+                font-size: 2.2em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ercdv-course-outline li {
+                font-size: 1.1em;
+            }
+
+            .ercdv-section-title {
+                font-size: 2em;
+            }
+        }
+
+        /*ADMISSION SECTION*/
+        .admission-requirements-section {
+            padding: 40px 0;
+            background: linear-gradient(135deg, #003366, #006837); /* Blue to Green Gradient */
+            color: white;
+        }
+
+        .admission-requirements-section .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .admission-card {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .admission-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .admission-card h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: #f4b400; /* Yellow Heading */
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 3px solid #f4b400; /* Yellow Underline */
+            padding-bottom: 8px;
+        }
+
+        .admission-card ul {
+            list-style: none;
+            padding-left: 0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .admission-card ul li {
+            margin-bottom: 12px;
+            padding: 8px 12px;
+            background-color: #e8f0ff; /* Light Blue Background */
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .admission-card ul li:hover {
+            background-color: #d3ffd3; /* Light Green on Hover */
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .admission-card ul li strong {
+            display: block;
+            font-weight: bold;
+            color: #006837; /* Green Subheadings */
+            margin-bottom: 3px;
+        }
+
+        /* Small Card for Course Duration */
+        .small-card {
+            background-color: #f4b400; /* Yellow Background for Small Card */
+            padding: 15px;
+            border-radius: 10px;
+            color: #003366; /* Dark Blue Text */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 20px;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .small-card h4 {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .small-card p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .admission-card h2 {
+                font-size: 2rem;
+            }
+
+            .admission-card ul li {
+                font-size: 1rem;
+            }
+
+            .small-card {
+                max-width: 100%;
+            }
+        }
+            
+           
+
+
+
+        /*JOIN US SECTION*/
+        /* Styling for the full-width section with unique class and ID names */
+        .section-join {
+            width: 100%;
+            background-color: rgb(251, 252, 251); /* Blue background */
+            color: black;
+            padding: 20px 10px; /* Reduced padding */
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeInUnique 2s ease-in-out; /* Animation */
+        }
+
+        /* Animation for fade-in effect */
+        @keyframes fadeInUnique {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Styling for the heading with a unique ID */
+        #heading-join {
+            font-size: 28px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            animation: slideInUnique 1.5s ease-out; /* Text slide-in animation */
+        }
+
+        /* Slide-in effect for the heading */
+        @keyframes slideInUnique {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Styling for the paragraph with a unique class */
+        .text-info {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            animation: fadeInUnique 2s ease-in-out 0.5s; /* Delayed animation */
+        }
+
+        /* Styling for the anchor link with a unique ID */
+        #enroll-btn {
+            display: inline-block;
+            background-color: #1e88e5;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            animation: fadeInUnique 2s ease-in-out 1s; /* Delayed animation */
+        }
+
+        /* Hover effect for the button */
+        #enroll-btn:hover {
+            background-color: white;
+            color: #1e88e5;
+            text-decoration: underline;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            #heading-join {
+                font-size: 28px;
+            }
+            .text-info {
+                font-size: 16px;
+            }
+            #enroll-btn {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+            
+    </style>
+</head>
+<body>
+   <nav id="header"></nav>
+
+   <div class="landing-page">
+    <img src="/img/web2.jpg" alt="Web Development" class="landing-image">
+    <div class="overlay">
+        <h1>Become a Web Developer</h1>
+        <p style="color: #ffc107;">Start your journey in web development today!</p>
+    </div>
+</div>
+
+<section class="photo-text-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/img/web2.jpg" alt="Image" class="photo">
+            </div>
+            <div class="col-md-6 text-content">
+                <h2 style="font-size: 20px; color: black;" >About The Programm</h2>
+                <p>
+                    Our team at CodeToInnovate Africa is a diverse group of passionate
+                    professionals dedicated to driving innovation through technology. 
+                    With expertise in software development, ICT training, and digital 
+                    transformation, we bring together years of experience to solve complex
+                    challenges and deliver impactful solutions. Our collaborative approach
+                    fosters creativity and ensures that we stay at the forefront of the 
+                    tech industry, while our commitment to growth empowers us to support
+                    both clients and communities. Together, we strive to build a more 
+                    connected and innovative Africa.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--COURSE OUTLINE SECTION-->
+<section id="ercdv-course-outline-section">
+    <div class="ercdv-container">
+        <h2 class="ercdv-section-title">Course Outline</h2>
+
+        <div class="ercdv-course-content">
+            <!-- Card 1 -->
+            <div class="ercdv-card">
+                <ul class="ercdv-course-outline">
+                    <li>Master the art of creating websites that adapt seamlessly to different screen sizes and devices, ensuring an optimal user experience.</li>
+                    <li>Learn about websockets and real-time communication to enable live updates and interactivity in your applications.</li>
+                    <li>Gain insights into popular frontend frameworks like React and Vue.js, enabling you to build robust and interactive web applications.</li>
+                    <li>Successfully deploy frontend applications to various hosting platforms and understand the deployment process.</li>
+                </ul>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="ercdv-card">
+                <ul class="ercdv-course-outline">
+                    <li>Learn how to communicate with server-side APIs to fetch and display data on your web applications.</li>
+                    <li>Acquire insights into industry standards, coding conventions, and code review processes to ensure code quality and collaboration.</li>
+                    <li>Explore techniques to enhance website performance, reduce loading times, and improve user experience.</li>
+                    <li>Prepare for frontend engineering job interviews by honing your skills and building a strong portfolio of projects.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--ADMISSION SECTION-->
+<section class="admission-requirements-section">
+    <div class="container">
+        <div class="admission-card">
+            <h2>Admission Criteria
+            </h2>
+            <ul>
+                <li>
+                    <strong>Background of Education:</strong> 
+                    High school diploma or equivalent, foundation in mathematics and computer science
+                </li>
+                <li>
+                    <strong>English Language Proficiency:</strong> 
+                    TOEFL (iBT) - 80 or above, IELTS - 6.0 or above
+                </li>
+                <li>
+                    <strong>Admission Fee:</strong> 
+                    Application fee: $50 (non-refundable), Tuition fee: $10,000 (per semester), Other fees: $1,000 (estimated)
+                </li>
+            </ul>
+        </div>
+
+        <!-- Small Card for Course Duration -->
+        <div class="small-card">
+            <h4>Course Duration</h4>
+            <p>4 years, 8 semesters. Each semester spans 5 months with practicals and assessments.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<div class="section-join">
+    <h1 id="heading-join">Join Our Online Class</h1>
+    <p  style="color: black; font-size: 18px;" >
+        "Unlock your career potential with our hands-on curriculum, 
+        expertly designed to <br> equip you with the skills needed to thrive in today's
+        competitive job market."
+   </p>
+    <a href="contact.html" id="enroll-btn">Enroll Now</a>
+</div>
+
+
+<footer id="footer"></footer>
+
+   <!-- Include jQuery -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="/js/jquery.min.js"></script>
+   <script src="/js/bootsrapbundle.min.js"></script>
+   <script src="/js/owl.carousel.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+   <!-- jQuery to load header and footer -->
+   <script>
+      $(function(){
+          $('#header').load('header.html');
+          $('#footer').load('footer.html');
+      });
+   </script>
+</body>
+</html>

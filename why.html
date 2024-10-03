@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeToInnovate Africa</title>
+    <link rel="stylesheet" href="/css/bootsrap.min.css">
+    <link rel="stylesheet" href="/css/boxicons.min.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Section Styles */
+        .ctia-section {
+            display: flex;
+            background-color: white;
+            padding: 20px;
+            margin-top: 180px;
+        }
+
+        /* Header Styles */
+        .ctia-header {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .ctia-subheader h2 {
+            font-size: 1.5rem;
+            color: black;
+            margin-bottom: 15px;
+        }
+
+        /* Paragraph Styles */
+        .ctia-text {
+            font-size: 1rem;
+            color: black;
+        }
+
+        /* Flexbox Items */
+        .ctia-left {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .ctia-right {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .ctia-section {
+                flex-direction: column;
+            }
+
+            .ctia-left, .ctia-right {
+                margin-right: 0;
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Team Section Styles */
+        .photo-text-section {
+            margin-top: 8px;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #1E88E5, #43A047);
+
+            background-attachment: fixed;
+        }
+        
+        .photo-text-section .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        
+        .photo-text-section .photo {
+            
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            margin-top: 20px;
+        }
+        
+        .photo-text-section .photo:hover {
+            transform: scale(1.05);
+        }
+        
+        .photo-text-section .text-content {
+            padding: 0 10px 10px 15px;
+        }
+        
+        .photo-text-section h2 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #333;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .photo-text-section p {
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        .photo-text-section button {
+            animation: fadeIn 2s ease-in-out;
+        }
+        
+        /* Responsive styles */
+        
+        @media (max-width: 768px) {
+            .photo-text-section .row {
+                flex-direction: column;
+            }
+            
+            .photo-text-section .photo {
+                height: 200px;
+                margin-bottom: 20px;
+                margin-top: 0;
+            }
+            
+            .photo-text-section .text-content {
+                padding: 20px;
+            }
+            
+            .photo-text-section h2 {
+                margin-top: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .photo-text-section .photo {
+                height: 150px;
+            }
+            
+            .photo-text-section h2 {
+                font-size: 24px;
+            }
+            
+            .photo-text-section p {
+                font-size: 18px;
+            }
+        }
+        
+        /* Animation styles */
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /*
+        #ctia-team {
+            background: linear-gradient(135deg, #1E88E5, #43A047);
+            padding: 50px 0;
+            margin-top: 50px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .ctia-team-photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-height: 300px;
+            overflow: hidden;
+        }
+
+        .ctia-team-photo {
+            margin: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .ctia-team-photo img {
+            width: 170px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .ctia-team-photo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .ctia-team-photo:hover img {
+            transform: rotate(2deg);
+        }
+            */
+
+        /* CEO Profile Styles */
+        .ctia-ceo {
+            background-color:#083358;
+        
+            padding: 30px;
+            width: 100vw;
+            margin: 0;
+            text-align: center;
+        }
+
+        .ctia-ceo img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .ctia-ceo-quote {
+            font-style: italic;
+            color: #555;
+            margin-top: 20px;
+            font-size: 1.5rem;
+        }
+
+        .ctia-core-values {
+            text-align: center;
+        }
+
+        .ctia-core-value {
+            margin-bottom: 30px;
+        }
+
+        .ctia-core-value img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10%;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            
+            
+            
+        }
+
+        .ctia-core-values-section {
+            text-align: center;
+            padding: 20px;
+            margin-top: 0px;
+        }
+
+        .ctia-core-value-heading {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .ctia-core-value {
+            margin-bottom: 40px;
+        }
+
+        .ctia-core-value img {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .ctia-core-value img:hover {
+            transform: scale(1.1); /* Zoom on hover */
+        }
+
+        .ctia-core-value p {
+        
+            color: #555;
+        }
+
+        .ctia-core-value strong {
+            font-size: 1.4rem;
+            display: block;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        @media (max-width: 768px) {
+            .ctia-core-values-section {
+                padding: 20px;
+            }
+
+            .ctia-core-value-heading {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+   <nav id="header"></nav>
+
+   <section class="ctia-section">
+    <div class="ctia-left" style="margin-left: 60px;">
+        <h1 class="ctia-header">Why Choose Us?</h1>
+        <p class="ctia-text">Decisions you will never forget.</p>
+    </div>
+
+    <div class="ctia-right" style="margin-right: 40px;">
+        <p class="ctia-text">
+            At CodeToInnovate Africa, we stand out for our commitment to excellence, 
+            innovation, and personalized solutions. Our team of experienced professionals
+            combines technical expertise with a deep understanding of industry trends,
+            ensuring that we deliver cutting-edge services tailored to your unique needs.
+            We prioritize customer satisfaction, offer reliable support, and provide 
+            continuous learning opportunities to keep you ahead in the fast-evolving
+            tech landscape. Choose us for a trusted partner that empowers you to achieve
+            your digital goals efficiently and effectively.
+
+
+        </p>
+    </div>
+   </section>
+      <!-- TEAM PHOTO SECTION -->
+
+
+   <section class="photo-text-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/img/team3.jpeg" alt="Image" class="photo">
+            </div>
+            <div class="col-md-6 text-content">
+                <h2 style="color: #ffc107;">The Team</h2>
+                <p style="color: white; font-size: 16px;">
+                    Our team at CodeToInnovate Africa is a diverse group of passionate
+                    professionals dedicated to driving innovation through technology. 
+                    With expertise in software development, ICT training, and digital 
+                    transformation, we bring together years of experience to solve complex
+                    challenges and deliver impactful solutions. Our collaborative approach
+                    fosters creativity and ensures that we stay at the forefront of the 
+                    tech industry, while our commitment to growth empowers us to support
+                    both clients and communities. Together, we strive to build a more 
+                    connected and innovative Africa.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <!-- TEAM PHOTO SECTION -->
+    <!--
+   <section class="py-5" id="ctia-team">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="ctia-team-photos">
+                    <div class="ctia-team-photo">
+                        <img src="/img/eric.jpg" alt="Team Member 1">
+                    </div>
+                    <div class="ctia-team-photo">
+                        <img src="/img/eric.jpg" alt="Team Member 2">
+                    </div>
+                    <div class="ctia-team-photo">
+                        <img src="/img/eric.jpg" alt="Team Member 3">
+                    </div>
+                    <div class="ctia-team-photo">
+                        <img src="/img/eric.jpg" alt="Team Member 4">
+                    </div>
+                    <div class="ctia-team-photo">
+                        <img src="/img/eric.jpg" alt="Team Member 5">
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2 style="color: #FFC107;">The Team</h2>
+                <p style="color: white; font-size: 16px;">
+                
+                    
+                    "Our team at CodeToInnovate Africa is a diverse group of passionate professionals
+                     dedicated to driving innovation through technology. With expertise in software 
+                     development, ICT training, and digital transformation, we bring together years 
+                     of experience to solve complex challenges and deliver impactful solutions. 
+                     Our collaborative approach fosters creativity and ensures that we stay at the 
+                     forefront of the tech industry, while our commitment to growth empowers us to 
+                     support both clients and communities. Together, we strive to build a more connected
+                      and innovative Africa."</p>
+                
+            </div>
+        </div>
+    </div>
+   </section>
+-->
+
+   <!-- CEO Section -->
+   <div class="ctia-ceo">
+      <img src="img/eric.jpg" alt="Founder & CEO">
+      <p style="color: white;">Emmanuel Ongia <br>Founder & CEO</p>
+      <p class="ctia-ceo-quote" style="color: white;">"At CodeToInnovate Africa, we believe that every idea 
+        has the potential to shape the future. Our role is to bring those ideas to life."
+
+        </p>
+   </div>
+
+   <!-- Core Values Section -->
+   <section class="container ctia-core-values-section">
+    <h1 class="ctia-core-value-heading" style="font-size: 20px;">Core Values</h1>
+    <div class="row">
+        <div class="col-md-4 ctia-core-value">
+            <img src="/img/inn.jpg" alt="Integrity" style="height: 50px; width: 50px;">
+            <strong style="font-size: 16px; color: black;">Innovation & excellence</strong>
+            <p>
+                
+                At CodeToInnovate Africa, innovation and excellence drive everything we do. 
+                We embrace creativity and encourage out-of-the-box thinking to develop cutting-edge
+                solutions.</p>
+        </div>
+        <div class="col-md-4 ctia-core-value">
+            <img src="/img/teamwork.jpg" alt="Quality" style="height: 50px; width: 50px;" >
+            <strong style="font-size: 16px; color: black;">Collaboration & Teamwork</strong>
+            <p>
+                
+                Collaboration and teamwork are at the heart of CodeToInnovate Africa. 
+                We believe that great ideas are born from diverse perspectives and open
+                 communication. 
+                </p>
+        </div>
+        <div class="col-md-4 ctia-core-value">
+            <img src="/img/Customer-Centricity.jpg" alt="Innovation" style="height: 50px; width: 50px;">
+            <strong style="font-size: 16px; color: black;">Customer-Centricity
+            </strong>
+            <p>Customer centricity drives our decisions and actions. We prioritize 
+                understanding and meeting our clients' needs, ensuring tailored 
+                solutions and exceptional service.</p>
+        </div>
+        <div class="col-md-4 ctia-core-value">
+            <img src="/img/Integrity-Accountability-Values.png" alt="Customer Focus" style="height: 50px; width: 50px;">
+            <strong style="font-size: 16px; color: black;">Integrity & Accountability
+            </strong>
+            <p>At CodeToInnovate Africa, integrity and accountability are fundamental 
+                to our operations. We prioritize transparency and ethical standards,
+                 ensuring responsibility for our actions.
+            </p>
+
+
+        </div>
+        <div class="col-md-4 ctia-core-value">
+            <img src="/img/diversity.png" alt="Teamwork" style="height: 50px; width: 50px;">
+            <strong style="font-size: 16px; color: black;">Diversity, Equity & Inclusion
+            </strong>
+            <p>
+                
+                At CodeToInnovate Africa, we celebrate diversity as a source of strength.
+                 We believe in creating an inclusive environment where everyone feels valued
+                  and empowered, regardless of their background. 
+                    
+                     </p>
+        </div>
+        <div class="col-md-4 ctia-core-value">
+            <img src="/img/trust.png" alt="Respect" style="height: 50px; width: 50px;">
+            <strong style="font-size: 16px; color: black;">Trust</strong>
+            <p>
+            
+                Trust is at the heart of everything we do at CodeToInnovate Africa.
+                 We are committed to delivering on our promises, building strong 
+                 relationships through reliability and consistency.</p>
+        </div>
+    </div>
+</section>
+
+
+<footer id="footer"></footer>
+
+   <!-- Include jQuery -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="/js/jquery.min.js"></script>
+   <script src="/js/bootsrapbundle.min.js"></script>
+   <script src="/js/owl.carousel.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+   <!-- jQuery to load header and footer -->
+   <script>
+      $(function(){
+          $('#header').load('header.html');
+          $('#footer').load('footer.html');
+      });
+   </script>
+</body>
+</html>

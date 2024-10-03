@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeToInnovate Africa</title>
+    <link rel="stylesheet" href="/css/bootsrap.min.css">
+    <link rel="stylesheet" href="/css/boxicons.min.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .blog-post {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: auto;
+        }
+
+        .blog-post h2 {
+            margin-top: 20px;
+            font-size: 2em;
+        }
+
+        .blog-post .date-time {
+            font-size: 0.9em;
+            color:black;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .blog-post p {
+            margin: 20px 0;
+            color: #555;
+        }
+
+        .share-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .share-section h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .share-icons a {
+            margin: 0 10px;
+            color:#007BFF;
+            font-size: 1.5em;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .share-icons a:hover {
+            color: #007BFF;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+<nav id="header"></nav>
+
+<header  style="margin-top: 135px;">
+    <h1>Exploring the Beauty of Nature</h1>
+</header>
+
+<div class="blog-post">
+    <img src="https://source.unsplash.com/800x400/?nature,water" alt="Blog Image">
+    <h2>Exploring the Beauty of Nature</h2>
+    <p class="date-time">Published on: September 25, 2024 - 10:30 AM</p>
+    <p>
+        Discover the most beautiful landscapes and natural wonders in the world. Join us as we explore majestic mountains, serene lakes, and lush forests. Breathtaking views, unique species, and captivating moments are waiting for you to experience.
+    </p>
+    <p>
+        Nature offers a peaceful escape from the hustle and bustle of daily life. Whether you're hiking through dense forests or gazing at the clear skies above, the beauty of nature is endless. In this article, we'll dive deeper into the wonders of the world and how they can inspire us.
+    </p>
+
+    <!-- Social Media Share Section -->
+    <div class="share-section">
+        <h3>Share this post:</h3>
+        <div class="share-icons">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=URL_HERE" target="_blank" class="fab fa-facebook"></a>
+            <a href="https://twitter.com/intent/tweet?url=URL_HERE&text=Check+out+this+post" target="_blank" class="fab fa-twitter"></a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=URL_HERE&title=Exploring+the+Beauty+of+Nature" target="_blank" class="fab fa-linkedin"></a>
+            <a href="https://api.whatsapp.com/send?text=Check+out+this+post+URL_HERE" target="_blank" class="fab fa-whatsapp"></a>
+            <a href="mailto:?subject=Check out this post&body=Check out this post: URL_HERE" class="fas fa-envelope"></a>
+        </div>
+    </div>
+</div>
+
+           
+
+  <footer id="footer"></footer>
+
+
+
+
+
+   
+
+   
+
+
+
+
+   <!-- Include jQuery -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="/js/jquery.min.js"></script>
+   <script src="/js/bootsrapbundle.min.js"></script>
+   <script src="/js/owl.carousel.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+   <!-- jQuery to load header and footer -->
+   <script>
+      $(function(){
+          $('#header').load('header.html');
+          $('#footer').load('footer.html');
+      });
+   </script>
+
+<script>
+    // Replace 'URL_HERE' with the actual URL of the blog post
+    const shareLinks = document.querySelectorAll('.share-icons a');
+    shareLinks.forEach(link => {
+        link.href = link.href.replace('URL_HERE', window.location.href);
+    });
+</script>
+
+</body>
+</html>

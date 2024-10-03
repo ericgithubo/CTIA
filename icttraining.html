@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeToInnovate Africa</title>
+    <link rel="stylesheet" href="/css/bootsrap.min.css">
+    <link rel="stylesheet" href="/css/boxicons.min.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+.landing-page {
+            margin-top: 100 px;
+            position: relative;
+            height: 90vh; /* Reduced height from 100vh to 60vh */
+            overflow: hidden; /* Hide overflow */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .landing-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the entire section */
+            position: absolute; /* Position behind text */
+            top: 0;
+            left: 0;
+            z-index: 1; /* Image behind the text */
+        }
+
+        .overlay {
+            position: relative;
+            z-index: 2; /* Text on top of the image */
+            color: #fff;
+            padding: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .overlay h1 {
+    
+            
+            font-size: 3em; /* Responsive font size */
+            margin: 0;
+            
+        }
+
+        .overlay p {
+            font-size: 1.5em; /* Responsive font size */
+        }
+
+        @media (max-width: 768px) {
+            .overlay h1 {
+                font-size: 2.5em; /* Smaller font for mobile */
+            }
+
+            .overlay p {
+                font-size: 1.2em; /* Smaller font for mobile */
+            }
+        }
+           /*stye for about the program*/ 
+
+        .photo-text-section {
+            margin-top: 8px;
+            padding: 30px 0;
+        background-color: white;
+
+            background-attachment: fixed;
+        }
+        
+        .photo-text-section .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        
+        .photo-text-section .photo {
+            
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            margin-top: 20px;
+        }
+        
+        .photo-text-section .photo:hover {
+            transform: scale(1.05);
+        }
+        
+        .photo-text-section .text-content {
+            padding: 0 10px 10px 15px;
+        }
+        
+        .photo-text-section h2 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #333;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .photo-text-section p {
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        .photo-text-section button {
+            animation: fadeIn 2s ease-in-out;
+        }
+        
+        /* Responsive styles */
+        
+        @media (max-width: 768px) {
+            .photo-text-section .row {
+                flex-direction: column;
+            }
+            
+            .photo-text-section .photo {
+                height: 200px;
+                margin-bottom: 20px;
+                margin-top: 0;
+            }
+            
+            .photo-text-section .text-content {
+                padding: 20px;
+            }
+            
+            .photo-text-section h2 {
+                margin-top: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .photo-text-section .photo {
+                height: 150px;
+            }
+            
+            .photo-text-section h2 {
+                font-size: 24px;
+            }
+            
+            .photo-text-section p {
+                font-size: 18px;
+            }
+        }
+        
+        /* Animation styles */
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+/*style for ict programs*/
+#corporate-ict-training {
+            margin-top: 32px;
+            background-image: linear-gradient(to bottom right, #007bff, #28a745);
+            padding: 40px 0;
+            color: white;
+            border-radius: 0px;
+        }
+
+        #corporate-ict-training h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color:white;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeInDown 1s ease;
+            margin-bottom: 50px;
+        }
+
+        .program-card {
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.9s ease;
+            color: #333;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-title {
+            font-size: 20px;
+            color: #007bff;
+        }
+
+        .card-text {
+            font-size: 18px;
+            color: #555;
+            margin-top: 15px;
+        }
+
+        /* Keyframe animation */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #corporate-ict-training h2 {
+                font-size: 2rem;
+            }
+
+            .card-title {
+                font-size: 1.4rem;
+            }
+        }
+        
+           
+        /*style for who can aplly*/
+                /* Section Styling */
+                #who-can-apply {
+            margin-top: -5px;
+            background-color: whitesmoke;
+            padding: 30px 0; /* Reduced padding */
+            border-radius: 15px;
+            
+            position: relative;
+        }
+
+        #who-can-apply h2 {
+            font-size: 2.5rem; /* Reduced heading size */
+            font-weight: bold;
+            color: black;
+            text-align: center;
+            margin-bottom: 20px; /* Reduced margin */
+            text-transform: uppercase;
+            
+        }
+
+        #who-can-apply h3 {
+            font-size: 1.8rem; /* Adjusted size for subheading */
+            text-align: center;
+            margin-bottom: 20px;
+            color: #28a745;
+        }
+
+        /* List Styling */
+        #who-can-apply ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #who-can-apply li {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        #who-can-apply li:hover {
+            transform: translateY(-3px);
+        }
+
+        #who-can-apply li i {
+            margin-right: 15px;
+            font-size: 1.5rem;
+            color: #ffc107;
+        }
+
+        #who-can-apply li span {
+            font-size: 1.3rem;
+            color: #333;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #who-can-apply h2 {
+                font-size: 2rem;
+            }
+
+            #who-can-apply h3 {
+                font-size: 1.5rem;
+            }
+
+            #who-can-apply li {
+                padding: 15px;
+            }
+        }
+    
+        
+            
+           
+
+        
+
+      
+
+        
+            
+           
+
+
+
+        /*JOIN US SECTION*/
+        /* Styling for the full-width section with unique class and ID names */
+        .section-join {
+            width: 100%;
+            background-color:white; /* Blue background */
+            color: black;
+            padding: 20px 10px; /* Reduced padding */
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeInUnique 2s ease-in-out; /* Animation */
+        }
+
+        /* Animation for fade-in effect */
+        @keyframes fadeInUnique {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Styling for the heading with a unique ID */
+        #heading-join {
+            font-size: 28px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            animation: slideInUnique 1.5s ease-out; /* Text slide-in animation */
+        }
+
+        /* Slide-in effect for the heading */
+        @keyframes slideInUnique {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Styling for the paragraph with a unique class */
+        .text-info {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            animation: fadeInUnique 2s ease-in-out 0.5s; /* Delayed animation */
+        }
+
+        /* Styling for the anchor link with a unique ID */
+        #enroll-btn {
+            display: inline-block;
+            background-color: #1e88e5;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            animation: fadeInUnique 2s ease-in-out 1s; /* Delayed animation */
+        }
+
+        /* Hover effect for the button */
+        #enroll-btn:hover {
+            background-color: white;
+            color: #1e88e5;
+            text-decoration: underline;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            #heading-join {
+                font-size: 28px;
+            }
+            .text-info {
+                font-size: 16px;
+            }
+            #enroll-btn {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+            
+    </style>
+</head>
+<body>
+   <nav id="header"></nav>
+
+   <div class="landing-page">
+    <img src="/img/ict train.jpg" alt="Web Development" class="landing-image">
+    <div class="overlay">
+        <h1>Become a Web Developer</h1>
+        <p style="color: #ffc107;">Start your journey in web development today!</p>
+    </div>
+</div>
+
+<section class="photo-text-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/img/ict train.jpg" alt="Image" class="photo">
+            </div>
+            <div class="col-md-6 text-content">
+                <h2 style="font-size: 20px; color: black;" >About The Programm</h2>
+                <p>
+                    Our team at CodeToInnovate Africa is a diverse group of passionate
+                    professionals dedicated to driving innovation through technology. 
+                    With expertise in software development, ICT training, and digital 
+                    transformation, we bring together years of experience to solve complex
+                    challenges and deliver impactful solutions. Our collaborative approach
+                    fosters creativity and ensures that we stay at the forefront of the 
+                    tech industry, while our commitment to growth empowers us to support
+                    both clients and communities. Together, we strive to build a more 
+                    connected and innovative Africa.</p>
+            </div>
+        </div>
+    </div>
+
+        <!-- Corporate ICT Training Section -->
+        <section id="corporate-ict-training" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Our Corporate ICT Training Programs</h2>
+                <div class="row">
+                    <!-- Program 1 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card program-card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 style="text-align: center; color: #1e88e5;" class="card-title text-center">Cybersecurity Essentials</h3>
+                                <p class="card-text">Learn to protect your organization's critical data and networks from cybersecurity threats. Ideal for IT professionals looking to enhance their security skills.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Program 2 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card program-card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 style="text-align: center; color: #1e88e5;" class="card-title text-center">Computer Networking</h3>
+                                <p class="card-text">Master cloud technologies like AWS and Azure to optimize your organization’s IT infrastructure and improve operational efficiency.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Program 3 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card program-card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 style="text-align: center; color: #1e88e5;" class="card-title text-center">Data Analysis</h3>
+                                <p style="text-align: left;" class="card-text">Equip your team with data analysis skills using tools like Power BI and Python to make data-driven decisions that improve business performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Who Can Apply Section -->
+    <section id="who-can-apply" class="py-5">
+        <div class="container">
+            <h2 style="font-size: 24px;">Who Can Apply for Corporate ICT Training</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <i class="fas fa-user"></i>
+                    <span class="font-weight-bold">IT Professionals:</span>
+                    Upgrade your skills with our Corporate ICT training programs.
+                </li>
+                <!--
+                <li class="list-group-item">
+                    <i class="fas fa-building"></i>
+                    <span class="font-weight-bold">Business Leaders:</span>
+                    Learn how to leverage technology for operational efficiency and better decision-making.
+                </li>
+            -->
+                <li class="list-group-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span class="font-weight-bold">Students & Graduates:</span>
+                    Enhance your knowledge and gain practical ICT skills to boost your career prospects.
+                </li>
+                <li class="list-group-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span class="font-weight-bold">Educators:</span>
+                    Gain advanced skills to integrate technology into your teaching methods.
+                </li>
+                <!--
+                <li class="list-group-item">
+                    <i class="fas fa-tools"></i>
+                    <span class="font-weight-bold">Technical Staff:</span>
+                    Improve your technical capabilities to support ICT infrastructure.
+                </li>
+            -->
+                <li class="list-group-item">
+                    <i class="fas fa-user-tie"></i>
+                    <span class="font-weight-bold">Entrepreneurs:</span>
+                    Discover how to leverage ICT for business innovation and growth.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+ 
+
+            
+
+
+
+
+
+<div class="section-join">
+    <h1 id="heading-join">Get Started With Our Corperate ICT Training</h1>
+    <p  style="color: black; font-size: 18px;" >
+        Contact us today to find the best training program for your team.
+
+
+   </p>
+    <a href="contact.html" id="enroll-btn">Enroll Now</a>
+</div>
+
+
+<footer id="footer"></footer>
+
+   <!-- Include jQuery -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="/js/jquery.min.js"></script>
+   <script src="/js/bootsrapbundle.min.js"></script>
+   <script src="/js/owl.carousel.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+   <!-- jQuery to load header and footer -->
+   <script>
+      $(function(){
+          $('#header').load('header.html');
+          $('#footer').load('footer.html');
+      });
+   </script>
+</body>
+</html>
