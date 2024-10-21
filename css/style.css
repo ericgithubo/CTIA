@@ -448,7 +448,8 @@ nav.navbar {
 }
 
 .flip-card-back {
-    background: linear-gradient(to right, #1E88E5, #43A047);
+    /*background: linear-gradient(to right, #1E88E5, #43A047);*/
+    background-color: #f4b400;;
     transform: rotateY(180deg);
 }
 
@@ -461,7 +462,8 @@ nav.navbar {
 .flip-card-back .btn {
     border: 2px solid white;
 
-    color: white;
+    color: #003366; /* Dark Blue Text */
+
     padding: 2px 6px;
     
     border-radius: 5px;
@@ -477,7 +479,10 @@ nav.navbar {
     margin-top: -9px;
     margin-left: 0px;
     margin-right: 0px;
-    background: linear-gradient(135deg, #1E88E5, #43A047);
+    background: linear-gradient(135deg, #003366, #006837); /* Blue to Green Gradient */
+
+    /*background: linear-gradient(135deg, #1E88E5, #43A047);*/
+
     padding: 50px 0;
     color: white;
     text-align: center;
@@ -497,7 +502,7 @@ nav.navbar {
       transition: transform 0.3s;
     }
     .stat-icon {
-      font-size: 20px;
+      font-size: 60px;
       color: #FFC107;
       margin-bottom: 5px;
     }
@@ -623,6 +628,7 @@ nav.navbar {
     margin-top: -1px;
     margin-left: 0px;
     margin-right: 0px;
+    
     background-color: #1E88E5; /* Light blue background */
     padding: 20px 0;
   }
@@ -633,14 +639,22 @@ nav.navbar {
     margin-bottom: 40px;
   }
   .accordion-button {
-    background-color:white;
+    background-color: #e8f0ff; /* Light Blue Background */
+
+    /*background-color:red;*/
     color: black;
     font-weight: bold;
     transition: background-color 0.3s ease-in-out;
   }
   .accordion-button:hover {
-    background:linear-gradient(135deg, #1E88E5, #43A047);
-    color: white;
+    background-color: #d3ffd3; /* Light Green on Hover */
+    color: #006837; /* Green Subheadings */
+
+
+    
+    /*background:linear-gradient(135deg, #1E88E5, #43A047);*/
+
+    /*color: white;*/
   }
   .accordion-button:focus {
     box-shadow: none;
@@ -650,7 +664,7 @@ nav.navbar {
     border-radius: 5px;
   }
   .faq-section h2 {
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 1.5rem;
   }
   .faq-section .card {
@@ -668,13 +682,13 @@ nav.navbar {
     border-radius: 8px;
   }
   .faq-description h1 {
-    font-size: 22PX;
+    font-size: 25PX;
     font-weight: bold;
     color: white;
     margin-bottom: 15px;
   }
   .faq-description p {
-    font-size: 1.2rem;
+    font-size: 18px;
     color: white;
     margin-bottom: 15px;
   }
@@ -691,7 +705,7 @@ nav.navbar {
     color:black;
   }
   .partners-header {
-    font-size: 30px;
+    font-size: 25px;
     color: black;
     font-weight: bold;
     
@@ -729,7 +743,7 @@ nav.navbar {
     text-align: center; /* Center text and button */
 }
 .partner-section h1 {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     color: white;
     margin-bottom: 20px;
@@ -773,12 +787,12 @@ nav.navbar {
     background-color: #000411;
     color: #f9f9f9;
     padding: 60px 0;
-    font-size: 14px;
+    font-size: 16px;
     
 }
 
 .footer .company-name {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     letter-spacing: 2px;
     color:white;
@@ -786,9 +800,9 @@ nav.navbar {
 }
 
 .footer .footer-heading {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 16px;
-    color: white;
+    color: #1E88E5;
 
     font-weight: bold;
     display: inline-block;
@@ -823,7 +837,7 @@ nav.navbar {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
-    font-size: 0.85rem;
+    font-size: 18px;
     color:white
 }
 
